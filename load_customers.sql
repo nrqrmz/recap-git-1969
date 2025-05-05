@@ -7,3 +7,4 @@ ID
 , Order_in_4_weeks -- Ibrahim
 , Orders_count -- Vincent
 FROM `data-analytics-bootcamp-363212.bolk.customers`
+ORDER BY Orders_count DESC
