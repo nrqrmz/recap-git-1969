@@ -1,6 +1,6 @@
 SELECT
 ID
-, Year_of_birth -- James
+, CAST(Year_of_birth AS int64) AS year_clean -- James
 , Registered_at__fidelity_app_ -- Jose
 , has_verified_email -- Ibrahim
 , Has_opt_out_phone -- Vincent
