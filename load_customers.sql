@@ -10,8 +10,8 @@ CASE
     WHEN has_verified_email = TRUE THEN 1
     ELSE 0
   END AS has_verified_email_numeric,
-Has_verified_phone,
+if(Has_verified_phone,1,0) as has_verified_phone,
 CAST(Order_in_4_weeks AS INT64) AS orders_in_4_weeks,
-Orders_count
+ifnull(cast(Orders_count as int64),0) as Orders_count
 FROM `data-analytics-bootcamp-363212.bolk.customers`
 ORDER BY Orders_count DESC
