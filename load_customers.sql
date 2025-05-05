@@ -1,9 +1,9 @@
-SELECT
-ID
-, CAST(Year_of_birth AS int64) AS year_clean -- James
-, Registered_at__fidelity_app_ -- Jose
-, has_verified_email -- Ibrahim
-, Has_opt_out_phone -- Vincent
-, Order_in_4_weeks -- Ibrahim
-, Orders_count -- Vincent
-FROM `data-analytics-bootcamp-363212.bolk.customers`
+SELECT 
+ID,
+IF(Year_of_birth is NULL,0,CAST(Year_of_birth AS int64)) AS year_clean,
+Registered_at__fidelity_app_,
+has_verified_email,
+Has_verified_phone,
+Order_in_4_weeks,
+Orders_count,
+FROM `glassy-proton-457613-m8.5_5_25_recap.customers`
