@@ -6,4 +6,5 @@ has_verified_email,
 Has_verified_phone,
 Order_in_4_weeks,
 Orders_count,
-FROM `glassy-proton-457613-m8.5_5_25_recap.customers`
+FROM `data-analytics-bootcamp-363212.bolk.customers`
+ORDER BY Orders_count DESC
